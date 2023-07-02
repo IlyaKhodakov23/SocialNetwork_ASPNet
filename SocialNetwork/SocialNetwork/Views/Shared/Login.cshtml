@@ -1,0 +1,27 @@
+﻿@model SocialNetwork.ViewModels.Account.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="block-reg background-white">
+    <h4 class="center">Добро пожаловать!</h4>
+    <form method="post" asp-controller="AccountManager" asp-action="Login">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+            <input type="checkbox" asp-for="RememberMe" value="true"> Да<Br>
+    </div>
+    <div>
+        <input type="submit" value="Войти" />
+    </div>
+    </form>
+</div>
+
